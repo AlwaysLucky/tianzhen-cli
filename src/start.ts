@@ -17,7 +17,7 @@ export const start = async (base: string, answers: answerType) => {
   // vue3
   if (vue3) {
     setEnv('isVue3', true)
-    vueInit()
+    await vueInit()
     specialFn()
   }
 
