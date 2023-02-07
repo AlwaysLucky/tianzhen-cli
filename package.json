@@ -1,0 +1,30 @@
+{
+  "name": "tianzhen-cli",
+  "version": "1.0.0",
+  "description": "create vue project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.ts",
+    "serve": "ts-node ./index.ts",
+    "tsc": "tsc"
+  },
+  "keywords": [
+    "tianzhen-cli"
+  ],
+  "author": "tianzhen",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.19",
+    "cac": "^6.7.14",
+    "chalk": "4.1.2",
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/inquirer": "^9.0.3",
+    "inquirer": "8.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
