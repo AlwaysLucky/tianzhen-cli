@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import inquirer from 'inquirer'
 import { initCli } from './src/cli'
 import { answerType } from './src/interface'
