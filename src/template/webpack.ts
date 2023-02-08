@@ -15,6 +15,9 @@ module.exports = {
       template: './public/index.html' // 这里需要使用自定义模版文件
     }),
     new VueLoaderPlugin()
-  ]
+  ],
+  devServer: {
+    port: 9000
+  }
 }
 `
