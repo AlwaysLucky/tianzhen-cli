@@ -9,6 +9,7 @@ export function hasElementInArray(devArr: Array<String>, element: string) {
 
 export function writeInPackageJson(devArr: string[], key: string) {
   const packageJson = getPackageJson()
+  if(!packageJson[key]) packageJson[key] = {}
   devArr.forEach(item => {
     const index = item.lastIndexOf('@')
     const k = index !== -1 ? item.slice(0, index) : item
