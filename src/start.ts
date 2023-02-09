@@ -1,5 +1,6 @@
 import { vueInit } from './core/vue'
 import { eslintInit } from './core/eslint'
+import { vscodeInit } from './template/vscode'
 import { specialFn } from './core/special'
 import { getPackageJson, initProjectInfo, setEnv } from './utils/env'
 import { hasElementInArray } from './utils/tools'
@@ -23,6 +24,8 @@ export const start = async (base: string, answers: answerType) => {
 
   try {
     hasElementInArray(plugins, 'eslint') && eslintInit()
+
+    hasElementInArray(plugins, 'vscode') && vscodeInit()
   } catch (error) {
     debugError(JSON.stringify(error))
   }
