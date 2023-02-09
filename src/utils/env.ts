@@ -11,6 +11,7 @@ export const env = {
   isVueCli: false,
   isWebpack: true,
   isEslint: false,
+  isSass: false
 };
 
 type envKeys = keyof typeof env;

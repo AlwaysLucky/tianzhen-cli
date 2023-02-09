@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
 import { htmlTemplate } from '../template/indexHtml'
-import { webpackConfig } from '../template/webpack'
+import { webpackConfigFn } from '../template/webpack'
 import { templateIndex } from '../template/index'
 import { templateVue } from '../template/vue'
 import { writeInPackageJson } from "../utils/tools";
@@ -27,7 +27,7 @@ export async function vueInit() {
     fs.outputFileSync(getPath('./public/index.html'), htmlTemplate)
     fs.outputFileSync(getPath('./src/App.vue'), templateVue)
     fs.outputFileSync(getPath('./src/index.js'), templateIndex)
-    fs.outputFileSync(getPath('./webpack.config.js'), webpackConfig)
+    fs.outputFileSync(getPath('./webpack.config.js'), webpackConfigFn())
 
     const packageJson = getPackageJson()
     packageJson.scripts['start'] = 'webpack-dev-server --config webpack.config.js --mode=development'

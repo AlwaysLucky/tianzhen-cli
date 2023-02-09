@@ -1,4 +1,4 @@
 export interface answerType {
-  vue3: Boolean
+  vueVersion: string
   plugins: Array<String>
 }

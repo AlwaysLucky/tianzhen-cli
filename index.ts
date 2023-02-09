@@ -5,9 +5,10 @@ import { answerType } from './src/interface'
 
 const prompList = [
   {
-    type: 'confirm',
-    message: '创建vue3项目？',
-    name: 'vue3'
+    name: 'vueVersion',
+    type: 'list',
+    message: '选择Vue版本',
+    choices: ['Vue3', 'Vue2']
   },
   {
     type: 'checkbox',
@@ -15,25 +16,30 @@ const prompList = [
     name: 'plugins',
     choices: [
       {
-        name: 'eslint install',
+        name: 'sass',
+        value: 'sass',
+        checked: true
+      },
+      {
+        name: 'eslint',
         value: 'eslint',
-        checked: true,
+        checked: true
       },
       {
-        name: 'husky install',
+        name: 'husky',
         value: 'husky',
-        checked: true,
+        checked: true
       },
       {
-        name: 'commitLint install',
+        name: 'commitLint',
         value: 'commitLint',
-        checked: true,
+        checked: true
       },
       {
-        name: 'vscode格式化 install',
+        name: 'vscode本地配置',
         value: 'vscode',
-        checked: true,
-      },
+        checked: true
+      }
     ]
   }
 ]

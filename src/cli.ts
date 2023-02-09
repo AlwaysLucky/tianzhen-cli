@@ -2,7 +2,7 @@ import cac from 'cac'
 import { start } from './start'
 import { setEnv } from './utils/env'
 import { name, version } from '../package.json'
-import { answerType }  from './interface'
+import { answerType } from './interface'
 
 const cli = cac(name)
 
@@ -12,7 +12,7 @@ export function initCli(answers: answerType) {
     .alias('alias')
     .action(async (_root, options) => {
       let base: string = options.base
-      if(!base) {
+      if (!base) {
         base = process.cwd()
       }
       setEnv('base', base)
