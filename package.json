@@ -1,9 +1,10 @@
 {
   "name": "tianzhen-cli",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "create vue project",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --mode=development",
     "dev": "nodemon ./index.ts",
     "serve": "ts-node ./index.ts",
     "tsc": "tsc",
@@ -23,6 +24,7 @@
     "inquirer": "^8.0.0"
   },
   "devDependencies": {
+    "@types/cross-spawn": "^6.0.2",
     "@types/fs-extra": "^11.0.1",
     "@types/inquirer": "^9.0.3",
     "ts-node": "^10.9.1",

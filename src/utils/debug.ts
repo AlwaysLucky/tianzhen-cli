@@ -15,3 +15,11 @@ export const debugError = (msg: string) => {
 export const debugInfo = (msg: string) => {
   debugSwitch && log(chalk.hex('#646cff')(`[tianzhen-cli]:`) + chalk.green(msg));
 };
+
+/**
+ * debug warning信息
+ * @param msg 信息
+ */
+export const debugWarning = (msg: string) => {
+  log(chalk.hex('#646cff')(`[tianzhen-cli]:`) + chalk.yellow(msg));
+};
