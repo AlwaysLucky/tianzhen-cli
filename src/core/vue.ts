@@ -36,7 +36,7 @@ export async function vueInit() {
 
     fs.outputFileSync(getPath('./build/webpack.base.js'), webpackBaseFn())
     fs.outputFileSync(getPath('./build/webpack.dev.js'), webpackDevConfig)
-    fs.outputFileSync(getPath('./builds/webpack.prd.js'), webpackPrdConfig)
+    fs.outputFileSync(getPath('./build/webpack.prd.js'), webpackPrdConfig)
 
     const packageJson = getPackageJson()
     packageJson.scripts['start'] =

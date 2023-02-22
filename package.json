@@ -1,6 +1,6 @@
 {
   "name": "tianzhen-cli",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "create vue project",
   "main": "index.js",
   "scripts": {
