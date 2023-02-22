@@ -34,8 +34,8 @@ export const start = async (base: string, answers: answerType) => {
     hasElementInArray(plugins, 'sass') && sassInit()
 
     debugWarning('正在安装依赖...')
-    spawn.sync('yarn', ['install'], { stdio: 'pipe', cwd: getEnv('base') as string });
-    await run('npx eslint --fix webpack.config.js .eslintrc.js');
+    spawn.sync('yarn', ['install'], { stdio: 'pipe', cwd: getEnv('base') as string })
+    await run('npx eslint --fix build/*.js')
     debugWarning('please run yarn start')
   } catch (error) {
     debugError(JSON.stringify(error))
