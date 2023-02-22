@@ -33,7 +33,8 @@ export function webpackBaseFn() {
     const { merge } = require('webpack-merge')
     const { VueLoaderPlugin } = require('vue-loader')
     const devConfig = require('./webpack.dev')
-    // const isProduct = process.env.NODE_ENV === 'production'
+    const prdConfig = require('./webpack.prd')
+    const isProduct = process.env.NODE_ENV === 'production'
     const baseConfig = {
       module: {
         rules: [${rules}]
@@ -45,7 +46,7 @@ export function webpackBaseFn() {
         new VueLoaderPlugin()
       ]
     }
-    module.exports = merge(baseConfig, devConfig)
+    module.exports = isProduct ? merge(baseConfig, prdConfig) : merge(baseConfig, devConfig)
   `
   return webpackConfig
 }
