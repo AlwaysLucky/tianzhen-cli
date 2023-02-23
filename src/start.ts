@@ -22,7 +22,7 @@ export const start = async (base: string, answers: answerType) => {
   // vue3
   if (vueVersion === 'Vue3') {
     setEnv('isVue3', true)
-    await vueInit()
+    await vueInit(plugins)
     specialFn()
   }
 
@@ -35,7 +35,7 @@ export const start = async (base: string, answers: answerType) => {
 
     debugWarning('正在安装依赖...')
     spawn.sync('yarn', ['install'], { stdio: 'pipe', cwd: getEnv('base') as string })
-    await run('npx eslint --fix build/*.js')
+    await run('npx eslint --fix build/*.js .eslintrc.js src/App.vue')
     debugWarning('please run yarn start')
   } catch (error) {
     debugError(JSON.stringify(error))
